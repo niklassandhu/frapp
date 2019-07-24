@@ -5,7 +5,16 @@
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+  <style type="text/css"> 
+
+  body{
+        background-color: red   
+  } 
+  </style>
+
 </head>
+
 <body>
 
 <ons-page>
@@ -22,8 +31,8 @@
        
 
 
-               <ul class="list">
-                    <li class="list-item list-item--tappable">
+               <ul class="list" style="margin-top:20px;">
+                    <li class="list-item list-item--tappable" >
                       <div class="list-item__left">
                         <label class="checkbox">
                           <input type="checkbox" id="checkbox1" class="checkbox__input" name="c" >
@@ -35,11 +44,11 @@
                       </label>
                     </li>
                    
-                    <li class="list-item list-item--tappable">
-                      <div class="list-item__left">
+                    <li class="list-item list-item--tappable" style="margin-top:25px;">
+                      <div  class="list-item__left">
                         <label class="checkbox">
                           <input type="checkbox" id="checkbox2" class="checkbox__input" name="c">
-                          <div class="checkbox__checkmark"></div>
+                          <div  class="checkbox__checkmark"></div>
                         </label>
                         </div>
                         <label for="checkbox2" class="list-item__center">
@@ -47,7 +56,7 @@
                       </label>
                     </li>
 
-                    <li class="list-item list-item--tappable">
+                    <li class="list-item list-item--tappable" style="margin-top:25px;">
                         <div class="list-item__left">
                             <label class="checkbox">
                             <input type="checkbox" id="checkbox3" class="checkbox__input" name="c">
@@ -59,13 +68,12 @@
                         </label>
                     </li>
                 </ul>
-
                 
         <div style= "text-align: right; margin-bottom: 20px; margin-top: 20px; margin-right: 0px; margin-left: 0px;">
             <p>
             <center><ons-input id="ant" modifier="material" placeholder="Antwort eintippen" float> </ons-input></center> 
             </p>
-           
+            
         
         </div>
                                      
