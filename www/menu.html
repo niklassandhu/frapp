@@ -2,11 +2,11 @@
 <html>
 <head>
 <link rel="stylesheet" href="lib/css/onsenui.css">
-<link rel="stylesheet" href="lib/css/onsen-css-components.min.css">
+<link rel="stylesheet" href="lib/css/onsen-css-components.css">
 <script src="lib/js/onsenui.min.js"></script>
 </head>
 <body>
-<ons-navigator id="navigator" animation="slide"></ons-navigator>
+<ons-navigator id="navigator" animation="slide">
 
 <ons-page id="menu.html">
         <ons-toolbar>
@@ -38,6 +38,7 @@
                 </ons-list-item>
         </ons-list>
 </ons-page>
+</ons-navigator>
 
 <template id="umfrage1.html">
 <ons-page id="umfrage1.html">
@@ -53,7 +54,7 @@
                 <li class="list-item list-item--tappable">
                         <div class="list-item__left">
                         <label class="checkbox">
-                        <input type="checkbox" id="checkbox1" class="checkbox__input" name="c" checked="checked">
+                        <input type="checkbox" id="checkbox1" class="checkbox__input" name="c">
                         <div class="checkbox__checkmark"></div>
                         </label>
                         </div>
@@ -77,11 +78,11 @@
                 <li class="list-item list-item--tappable">
                         <div class="list-item__left">
                         <label class="checkbox">
-                        <input type="checkbox" id="checkbox2" class="checkbox__input" name="c">
+                        <input type="checkbox" id="checkbox3" class="checkbox__input" name="c">
                         <div class="checkbox__checkmark"></div>
                         </label>
                         </div>
-                        <label for="checkbox2" class="list-item__center">
+                        <label for="checkbox3" class="list-item__center">
                         vllt 
                         </label>
                 </li>
