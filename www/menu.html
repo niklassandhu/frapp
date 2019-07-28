@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+<link rel="stylesheet" href="../lib/css/onsenui.css">
+<link rel="stylesheet" href="../lib/css/onsen-css-components.min.css">
+<script src="../lib/js/onsenui.min.js"></script>
 </head>
 <body>
-<ons-navigator id="navigator" animation="slide">
-<ons-page id="menue.html">
+<ons-navigator id="navigator" animation="slide"></ons-navigator>
 
+<ons-page id="menu.html">
         <ons-toolbar>
                 <div class="center">Frapp</div>
         </ons-toolbar>
@@ -16,7 +16,7 @@
         <p style="text-align: center; margin-top: 10px;">
                 <ons-search-input placeholder="Search" onchange="ons.notification.alert('Searched for: ' + this.value)"></ons-search-input>
         </p>
-                        
+
         <ons-list>
                 <ons-list-header>Umfragen</ons-list-header>
                 <ons-list-item tappable modifier="chevron">
@@ -37,18 +37,16 @@
                 </div>
                 </ons-list-item>
         </ons-list>
-        
 </ons-page>
-</ons-navigator>
 
-<template id="umfrage1.html">
+<!-- <template id="umfrage1.html">
 <ons-page id="umfrage1.html">
         <ons-toolbar>
                 <div class="center">Wahl-Umfrage</div>
                 <div class="left">
                 <ons-back-button onclick="back"></ons-back-button>
                 </div>
-        </ons-toolbar>   
+        </ons-toolbar>
 
         <ons-list-header>Frage</ons-list-header>
                 <ul class="list">
@@ -91,13 +89,13 @@
 
 <ons-button modifier= "large">Nächste Frage</ons-button>
 </ons-page>
-</template>
+</template> -->
 </body>
 <script>
 document.getElementById("bt_umfrage1").addEventListener("click", function()
 { 
 var myNavigator = document.getElementById('navigator');
-myNavigator.pushPage('umfrage1.html');
+myNavigator.pushPage("Option mit text.html");
 });
 </script>
 </html>
