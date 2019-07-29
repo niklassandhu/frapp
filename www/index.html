@@ -14,20 +14,29 @@
         <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
             <ons-page>
                 <ons-list>
-                    <ons-list-item onclick="fn.load('home.html')" tappable>
-                        Home
+                    <ons-card>
+                        <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" alt="Onsen UI"
+                            style="width: 100%">
+                        <div class="title">
+                            Frapp
+                        </div>
+                    </ons-card>
+                    <ons-list-item tappable onclick="fn.load('home.html')" tappable>
+                        Start
                     </ons-list-item>
-                    <ons-list-item onclick="fn.load('settings.html')" tappable>
-                        Settings
+                    <ons-list-item tappable onclick="fn.load('settings.html')" tappable>
+                        Einstellungen
                     </ons-list-item>
-                    <ons-list-item onclick="fn.load('about.html')" tappable>
-                        About
+                    <ons-list-item tappable onclick="fn.load('about.html')" tappable>
+                        Impressum
                     </ons-list-item>
                 </ons-list>
             </ons-page>
         </ons-splitter-side>
         <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
     </ons-splitter>
+
+    <!-- STARTSEITE -->
 
     <template id="home.html">
         <ons-page>
@@ -76,5 +85,8 @@
             </ons-toolbar>
         </ons-page>
     </template>
+
+</body>
+<script src="appscript.js"></script>
 
 </html>
