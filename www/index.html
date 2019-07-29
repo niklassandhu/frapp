@@ -24,11 +24,11 @@
                     <ons-list-item tappable onclick="fn.load('home.html')" tappable>
                         Start
                     </ons-list-item>
-                    <ons-list-item tappable onclick="fn.load('settings.html')" tappable>
-                        Einstellungen
+                    <ons-list-item tappable onclick="fn.load('survey.html')" tappable>
+                        Umfragen
                     </ons-list-item>
                     <ons-list-item tappable onclick="fn.load('about.html')" tappable>
-                        Impressum
+                        Über
                     </ons-list-item>
                 </ons-list>
             </ons-page>
@@ -36,7 +36,7 @@
         <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
     </ons-splitter>
 
-    <!-- STARTSEITE -->
+    <!-- -------STARTSEITE------- -->
 
     <template id="home.html">
         <ons-page>
@@ -47,16 +47,19 @@
                     </ons-toolbar-button>
                 </div>
                 <div class="center">
-                    Main
+                    Frapp - Start
                 </div>
             </ons-toolbar>
-            <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-                Swipe right to open the menu!
-            </p>
+            <ons-button modifier="large" id="button" onclick="fn.load('survey.html')" , font-size: 17px
+                style="margin-top: 50%">
+                Umfragen starten
+            </ons-button>
         </ons-page>
     </template>
 
-    <template id="settings.html">
+    <!-- -------Umfrageseite------- -->
+
+    <template id="survey.html">
         <ons-page>
             <ons-toolbar>
                 <div class="left">
@@ -65,11 +68,35 @@
                     </ons-toolbar-button>
                 </div>
                 <div class="center">
-                    Settings
+                    Umfragen
                 </div>
             </ons-toolbar>
+
+            <ons-list>
+                <ons-list-item tappable modifier="chevron">
+                    <div class="left">
+                        <ons-icon icon="md-face" class="list-item__icon"></ons-icon>
+                    </div>
+                    <div class="center" id="bt_umfrage1" onclick="fn.load('s1_q1.html')">
+                        Wahl-Umfrage
+                    </div>
+                </ons-list-item>
+
+                <ons-list-item tappable modifier="chevron">
+                    <div class="left">
+                        <ons-icon icon="md-face" class="list-item__icon"></ons-icon>
+                    </div>
+                    <div class="center" id="bt_umfrage2">
+                        Beispielumfrage
+                    </div>
+                </ons-list-item>
+            </ons-list>
+
         </ons-page>
     </template>
+
+
+    <!-- -------Über uns Seite------- -->
 
     <template id="about.html">
         <ons-page>
@@ -80,9 +107,72 @@
                     </ons-toolbar-button>
                 </div>
                 <div class="center">
-                    About
+                    Über
                 </div>
             </ons-toolbar>
+
+            <ons-card>
+                <div class="title">
+                    Entwickler
+                </div>
+                <div class="content">
+                    <ons-list>
+                        <ons-list-item>Maurice Mansfeld</ons-list-item>
+                        <ons-list-item>Jannis Maruschke</ons-list-item>
+                        <ons-list-item>Niklas Sandhu</ons-list-item>
+                    </ons-list>
+                </div>
+            </ons-card>
+
+            <ons-card>
+                <div class="title">
+                    App Version
+                </div>
+                <div class="content">
+                    <ons-list>
+                        <ons-list-item>0.1_290719_2234.Alpha</ons-list-item>
+                    </ons-list>
+                </div>
+            </ons-card>
+
+        </ons-page>
+    </template>
+
+    <!-- -------Umfrage 1 Frage 1------- -->
+
+    <template id="s1_q1.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="center">Wahl-Umfrage</div>
+                <div class="left" onclick="fn.load('survey.html')">
+                    <ons-back-button>Back</ons-back-button>
+                </div>
+            </ons-toolbar>
+
+            <ons-list-header>Sind sie wahlberechtigt?</ons-list-header>
+
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-checkbox input-id="check-1"></ons-checkbox>
+                    </label>
+                    <label for="check-1" class="center">
+                        Ja
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-checkbox input-id="check-2"></ons-checkbox>
+                    </label>
+                    <label for="check-2" class="center">
+                        Nein
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <center>
+                <ons-button ripple modifier="quiet">Nächste Frage</ons-button>
+            </center>
         </ons-page>
     </template>
 
