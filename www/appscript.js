@@ -11,3 +11,7 @@ window.fn.load = function(page) {
   content.load(page)
     .then(menu.close.bind(menu));
 };
+
+var notify = function() {
+  ons.notification.alert('Diese Funktion ist noch nicht verfügbar!');
+};
