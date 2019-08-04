@@ -15,8 +15,7 @@
             <ons-page>
                 <ons-list>
                     <ons-card>
-                        <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" alt="Frapp"
-                            style="width: 100%">
+                        <img src="lib/pic/header_logo.png" alt="Frapp" style="width: 100%">
                         <div class="title">
                             Frapp
                         </div>
@@ -50,10 +49,17 @@
                     Frapp - Start
                 </div>
             </ons-toolbar>
-            <ons-button modifier="large" id="button" onclick="fn.load('survey.html')" , font-size: 17px
-                style="margin-top: 50%">
-                Umfragen starten
-            </ons-button>
+
+            <ons-card>
+                <div class="content">
+                    <ons-list-item>
+                        <marquee>Es sind neue Umfragen verfügbar!</marquee>
+                    </ons-list-item>
+                </div>
+                <ons-button modifier="large" id="button" onclick="fn.load('survey.html')" , font-size: 17px>
+                    Umfragen starten
+                </ons-button>
+            </ons-card>
         </ons-page>
     </template>
 
@@ -73,22 +79,26 @@
             </ons-toolbar>
 
             <ons-list>
-                <ons-list-item tappable modifier="chevron">
-                    <div class="left">
-                        <ons-icon icon="md-face" class="list-item__icon"></ons-icon>
-                    </div>
-                    <div class="center" id="bt_umfrage1" onclick="fn.load('s1_q1.html')">
-                        Wahl-Umfrage
-                    </div>
+                <ons-list-item tappable onclick="fn.load('s1_q1.html')">
+                    <ons-card style="width: 100%">
+                        <div class="title">
+                            Wahl-Umfrage
+                        </div>
+                        <div class="content">
+                            <ons-list-item>Hier können einige Informationen zur Umfrage stehen</ons-list-item>
+                        </div>
+                    </ons-card>
                 </ons-list-item>
 
-                <ons-list-item tappable modifier="chevron">
-                    <div class="left">
-                        <ons-icon icon="md-face" class="list-item__icon"></ons-icon>
-                    </div>
-                    <div class="center" id="bt_umfrage2">
-                        Beispielumfrage
-                    </div>
+                <ons-list-item tappable onclick="notify()">
+                    <ons-card style="width: 100%">
+                        <div class="title">
+                            Beispielumfrage
+                        </div>
+                        <div class="content">
+                            <ons-list-item>Hier können einige Informationen zur Umfrage stehen</ons-list-item>
+                        </div>
+                    </ons-card>
                 </ons-list-item>
             </ons-list>
 
@@ -130,7 +140,8 @@
                 </div>
                 <div class="content">
                     <ons-list>
-                        <ons-list-item>0.1_290719_2234.Alpha</ons-list-item>
+                        <ons-list-item>0.2_040819_1315.Alpha</ons-list-item>
+                        <ons-list-item>Last Update: 04.08.2019</ons-list-item>
                     </ons-list>
                 </div>
             </ons-card>
