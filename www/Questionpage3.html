@@ -7,83 +7,57 @@
 </head>
 <body>
         
-<ons-page>
+  <!-- 3. Frage -->
+  
+<template id="s1_q1.html">
+  <ons-page>
+      <ons-toolbar>
+          <div class="center">Umfrage zur Landtagswahl</div>
+          <div class="left" onclick="fn.load('survey.html')">
+              <ons-back-button>Back</ons-back-button>
+          </div>
+      </ons-toolbar>
 
+      <ons-list-header>Welche Tätigkeit führen sie aus?</ons-list-header>
 
-        <ons-toolbar>
-                
+      <ons-list>
+          <ons-list-item tappable>
+              <label class="left">
+                  <ons-radio name="color" input-id="radio-1" checked></ons-radio>
+              </label>
+              <label for="radio-1" class="center">
+                  Schüler
+              </label>
+          </ons-list-item>
+          <ons-list-item tappable>
+              <label class="left">
+                  <ons-radio name="color" input-id="radio-2"></ons-radio>
+              </label>
 
-                <div class="center">Wahl-Umfrage</div>
+              <label for="radio-2" class="center">
+                  Student
+              </label>
 
-        </ons-toolbar>   
-        
+              <label for="radio-2" class="center">
+                  Berufstätig
+              </label>
 
-        <ons-list-header>Welche Tätigkeit führen sie aus?</ons-list-header>
-       
+              <label for="radio-2" class="center">
+                  Rentner
+            </label>
 
+            <label for="radio-2" class="center">
+                anderes
+              </label>
 
-               <ul class="list" style="margin-top:20px;">
-                    <li class="list-item list-item--tappable">
-                      <div class="list-item__left">
-                        <label class="checkbox">
-                          <input type="checkbox" id="checkbox1" class="checkbox__input" name="c" >
-                          <div class="checkbox__checkmark"></div>
-                        </label>
-                        </div>
-                        <label for="checkbox1" class="list-item__center">
-                        Schüler
-                      </label>
-                    </li>
-                   
-                    <li class="list-item list-item--tappable" style="margin-top:25px;">
-                      <div class="list-item__left">
-                        <label class="checkbox">
-                          <input type="checkbox" id="checkbox2" class="checkbox__input" name="c">
-                          <div class="checkbox__checkmark"></div>
-                        </label>
-                        </div>
-                        <label for="checkbox2" class="list-item__center">
-                        Student
-                      </label>
-                    </li>
+          </ons-list-item>
+      </ons-list>
 
-                    <li class="list-item list-item--tappable" style="margin-top:25px;">
-                        <div class="list-item__left">
-                            <label class="checkbox">
-                            <input type="checkbox" id="checkbox3" class="checkbox__input" name="c">
-                            <div class="checkbox__checkmark"></div>
-                            </label>
-                        </div>
-                        <label for="checkbox3" class="list-item__center">
-                        Berufstätig 
-                        </label>
-                    </li>
-
-                    <li class="list-item list-item--tappable" style="margin-top:25px;">
-                        <div class="list-item__left">
-                            <label class="checkbox">
-                            <input type="checkbox" id="checkbox3" class="checkbox__input" name="c">
-                            <div class="checkbox__checkmark"></div>
-                            </label>
-                        </div>
-                        <label for="checkbox3" class="list-item__center">
-                        Rentner
-                        </label>
-                    </li>                    
-                </ul>
-                
-            <div style= "text-align: right; margin-bottom: 20px; margin-top: 20px; margin-right: 0px; margin-left: 0px;">
-                <p>
-                <center><ons-input id="ant" modifier="material" placeholder="Anderes" float> </ons-input></center> 
-                </p>
-                
-            
-            </div>                
-
-<center><ons-button ripple modifier= "quiet"> Next Question </ons-button></center> 
-
-                
-</ons-page>
+      <center>
+          <ons-button ripple modifier="quiet" onclick="notify()">Nächste Frage</ons-button>
+      </center>
+  </ons-page>
+</template>
 
 </body>
 </html>

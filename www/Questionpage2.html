@@ -7,63 +7,47 @@
 </head>
 <body>
         
-<ons-page>
+<!-- 2.Frage -->
 
+<template id="s1_q1.html">
+  <ons-page>
+      <ons-toolbar>
+          <div class="center">Umfrage zur Landtagswahl</div>
+          <div class="left" onclick="fn.load('survey.html')">
+              <ons-back-button>Back</ons-back-button>
+          </div>
+      </ons-toolbar>
 
-        <ons-toolbar>
-                
+      <ons-list-header>Welchem Geschlecht sind sie angehörig?</ons-list-header>
 
-                <div class="center">Wahl-Umfrage</div>
+      <ons-list>
+          <ons-list-item tappable>
+              <label class="left">
+                  <ons-radio name="color" input-id="radio-1" checked></ons-radio>
+              </label>
+              <label for="radio-1" class="center">
+                  Männlich
+              </label>
+          </ons-list-item>
+          <ons-list-item tappable>
+              <label class="left">
+                  <ons-radio name="color" input-id="radio-2"></ons-radio>
+              </label>
+              <label for="radio-2" class="center">
+                  Weiblich
+              </label>
+              <label for="radio-2" class="center">
+                  Divers
+              </label>
 
-        </ons-toolbar>   
-        
+          </ons-list-item>
+      </ons-list>
 
-        <ons-list-header>Geschlecht</ons-list-header>
-       
-
-
-               <ul class="list" style="margin-top:20px;">
-                    <li class="list-item list-item--tappable">
-                      <div class="list-item__left">
-                        <label class="checkbox">
-                          <input type="checkbox" id="checkbox1" class="checkbox__input" name="c" >
-                          <div class="checkbox__checkmark"></div>
-                        </label>
-                        </div>
-                        <label for="checkbox1" class="list-item__center">
-                        Männlich
-                      </label>
-                    </li>
-                   
-                    <li class="list-item list-item--tappable" style="margin-top:25px;">
-                      <div class="list-item__left">
-                        <label class="checkbox">
-                          <input type="checkbox" id="checkbox2" class="checkbox__input" name="c">
-                          <div class="checkbox__checkmark"></div>
-                        </label>
-                        </div>
-                        <label for="checkbox2" class="list-item__center">
-                        Weiblich
-                      </label>
-                    </li>
-
-                    <li class="list-item list-item--tappable" style="margin-top:25px;">
-                        <div class="list-item__left">
-                            <label class="checkbox">
-                            <input type="checkbox" id="checkbox3" class="checkbox__input" name="c">
-                            <div class="checkbox__checkmark"></div>
-                            </label>
-                        </div>
-                        <label for="checkbox3" class="list-item__center">
-                        Divers 
-                        </label>
-                    </li>
-                </ul>
-
-<center><ons-button ripple modifier= "quiet"> Next Question </ons-button></center> 
-
-                
-</ons-page>
+      <center>
+          <ons-button ripple modifier="quiet" onclick="notify()">Nächste Frage</ons-button>
+      </center>
+  </ons-page>
+</template>
 
 </body>
 </html>

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <link rel="stylesheet" href="lib/css/onsenui.css">
-  <link rel="stylesheet" href="lib/css/onsen-css-components.min.css">
-  <script src="lib/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="lib/css/onsenui.css">
+    <link rel="stylesheet" href="lib/css/onsen-css-components.min.css">
+    <script src="lib/js/onsenui.min.js"></script>
 </head>
-
 <body>
-
-<!-- erste frage -->
+        
+<!-- 8.Frage -->
 
 <template id="s1_q1.html">
   <ons-page>
@@ -20,7 +18,7 @@
           </div>
       </ons-toolbar>
 
-      <ons-list-header>Sind sie wahlberechtigt?</ons-list-header>
+      <ons-list-header>Welche Art von Medien nutzen Sie um sich politisch zu informieren?</ons-list-header>
 
       <ons-list>
           <ons-list-item tappable>
@@ -28,17 +26,33 @@
                   <ons-radio name="color" input-id="radio-1" checked></ons-radio>
               </label>
               <label for="radio-1" class="center">
-                  Ja
+                  Internet
               </label>
           </ons-list-item>
+          
           <ons-list-item tappable>
               <label class="left">
                   <ons-radio name="color" input-id="radio-2"></ons-radio>
               </label>
+
               <label for="radio-2" class="center">
-                  Nein
+                  Zeitung
               </label>
+
+              <label for="radio-2" class="center">
+                  Öffentlichen Veranstaltungen der Parteien 
+              </label>
+
+              <label for="radio-2" class="center">
+                  Radio
+            </label>
+
+            <label for="radio-2" class="center">
+                anderes
+            </label>
+
           </ons-list-item>
+
       </ons-list>
 
       <center>
