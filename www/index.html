@@ -277,7 +277,153 @@
                     </label>
                 </ons-list-item>
             </ons-list>
+            <section style="padding: 8px">
+                <ons-button modifier="large" onclick="fn.load('s1_p2.html')">Nächste Seite</ons-button>
+            </section>
+        </ons-page>
+    </template>
 
+    <template id="s1_p2.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="center">Umfrage zur Landtagswahl</div>
+                <div class="left" onclick="fn.load('s1_p1.html')">
+                    <ons-back-button>Back</ons-back-button>
+                </div>
+            </ons-toolbar>
+
+
+
+
+
+            <section style="padding: 8px">
+                <ons-button modifier="large" onclick="fn.load('s1_p3.html')">Nächste Seite</ons-button>
+            </section>
+        </ons-page>
+    </template>
+
+    <template id="s1_p3.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="center">Umfrage zur Landtagswahl</div>
+                <div class="left" onclick="fn.load('s1_p2.html')">
+                    <ons-back-button>Back</ons-back-button>
+                </div>
+            </ons-toolbar>
+
+            <ons-list-header>Wissen Sie, welche parteien zur Wahl stehen?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.9" input-id="q9.1"></ons-radio>
+                    </label>
+                    <label for="q9.1" class="center">
+                        Ja
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.9" input-id="q9.2"></ons-radio>
+                    </label>
+                    <label for="q9.2" class="center">
+                        Nein
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.9" input-id="q9.3"></ons-radio>
+                    </label>
+                    <label for="q9.3" class="center">
+                        Zum Teil
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Würden Sie sich als politisch engagiert bezeichnen?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.10" input-id="q10.1"></ons-radio>
+                    </label>
+                    <label for="q10.1" class="center">
+                        Ja
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.10" input-id="q10.2"></ons-radio>
+                    </label>
+                    <label for="q10.2" class="center">
+                        Nein
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.10" input-id="q10.3"></ons-radio>
+                    </label>
+                    <label for="q10.3" class="center">
+                        Bei bestimmten Themen
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Was denken Sie,wie hoch die prozentuale Wahlbeteiligung bei der letzten Landtagswahl war?
+            </ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.1"></ons-radio>
+                    </label>
+                    <label for="q11.1" class="center">
+                        0-20%
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.2"></ons-radio>
+                    </label>
+                    <label for="q11.2" class="center">
+                        20-40%
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.3"></ons-radio>
+                    </label>
+                    <label for="q11.3" class="center">
+                        40-60%
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.4"></ons-radio>
+                    </label>
+                    <label for="q11.4" class="center">
+                        60-80%
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.5"></ons-radio>
+                    </label>
+                    <label for="q11.5" class="center">
+                        80-100%
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Was denken Sie, wie könnte man mehr Leute zum Wählen überzeugen?</ons-list-header>
+            <div style="text-align: center; margin-top: 30px;">
+                <p>
+                    <ons-input id="s1p3.12" modifier="underbar" placeholder="Antwort eingeben..." float></ons-input>
+                </p>
+            </div>
             <section style="padding: 8px">
                 <ons-button modifier="large" onclick="notify()">Nächste Seite</ons-button>
             </section>
