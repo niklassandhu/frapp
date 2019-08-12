@@ -79,7 +79,7 @@
             </ons-toolbar>
 
             <ons-list>
-                <ons-list-item tappable onclick="fn.load('s1_q1.html')">
+                <ons-list-item tappable onclick="fn.load('s1_p1.html')">
                     <ons-card style="width: 100%">
                         <div class="title">
                             Umfrage zur Landtagswahl
@@ -149,9 +149,9 @@
         </ons-page>
     </template>
 
-    <!-- -------Umfrage 1 Frage 1------- -->
+    <!-- -------Umfrage 1 Seite 1------- -->
 
-    <template id="s1_q1.html">
+    <template id="s1_p1.html">
         <ons-page>
             <ons-toolbar>
                 <div class="center">Umfrage zur Landtagswahl</div>
@@ -161,29 +161,126 @@
             </ons-toolbar>
 
             <ons-list-header>Sind sie wahlberechtigt?</ons-list-header>
-
             <ons-list>
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="color" input-id="radio-1" checked></ons-radio>
+                        <ons-radio name="s1p1.1" input-id="q1.1"></ons-radio>
                     </label>
-                    <label for="radio-1" class="center">
+                    <label for="q1.1" class="center">
                         Ja
                     </label>
                 </ons-list-item>
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="color" input-id="radio-2"></ons-radio>
+                        <ons-radio name="s1p1.1" input-id="q1.2"></ons-radio>
                     </label>
-                    <label for="radio-2" class="center">
+                    <label for="q1.2" class="center">
                         Nein
                     </label>
                 </ons-list-item>
             </ons-list>
 
-            <center>
-                <ons-button ripple modifier="quiet" onclick="notify()">Nächste Frage</ons-button>
-            </center>
+            <hr />
+
+            <ons-list-header>Welchem Geschlecht sind sie angehörig?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.2" input-id="q2.1"></ons-radio>
+                    </label>
+                    <label for="q2.1" class="center">
+                        Männlich
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.2" input-id="q2.2"></ons-radio>
+                    </label>
+                    <label for="q2.2" class="center">
+                        Weiblich
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.2" input-id="q2.3"></ons-radio>
+                    </label>
+                    <label for="q2.3" class="center">
+                        Divers
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Welche Tätigkeit führen sie aus?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.1"></ons-radio>
+                    </label>
+                    <label for="q3.1" class="center">
+                        Schüler
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.2"></ons-radio>
+                    </label>
+                    <label for="q3.2" class="center">
+                        Student
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.3"></ons-radio>
+                    </label>
+                    <label for="q3.3" class="center">
+                        Berufstätig
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.4"></ons-radio>
+                    </label>
+                    <label for="q3.4" class="center">
+                        Rentner
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.5"></ons-radio>
+                    </label>
+                    <label for="q3.5" class="center">
+                        Anderes
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Haben sie sich mit den Wahlprogrammen der Parteien auseinandergesetzt?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.4" input-id="q4.1"></ons-radio>
+                    </label>
+                    <label for="q4.1" class="center">
+                        Ja
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.4" input-id="q4.2"></ons-radio>
+                    </label>
+                    <label for="q4.2" class="center">
+                        Nein
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <section style="padding: 8px">
+                <ons-button modifier="large" onclick="notify()">Nächste Seite</ons-button>
+            </section>
         </ons-page>
     </template>
 
