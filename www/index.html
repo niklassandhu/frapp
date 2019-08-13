@@ -277,20 +277,8 @@
                     </label>
                 </ons-list-item>
             </ons-list>
-            <section style="padding: 8px">
-                <ons-button modifier="large" onclick="fn.load('s1_p2.html')">Nächste Seite</ons-button>
-            </section>
-        </ons-page>
-    </template>
 
-    <template id="s1_p2.html">
-        <ons-page>
-            <ons-toolbar>
-                <div class="center">Umfrage zur Landtagswahl</div>
-                <div class="left" onclick="fn.load('s1_p1.html')">
-                    <ons-back-button>Back</ons-back-button>
-                </div>
-            </ons-toolbar>
+            <hr />
 
             <ons-list-header>Wie waren sie mit der bisherigen Landesregierung zufrieden?</ons-list-header>
             <ons-list>
@@ -346,7 +334,7 @@
                     </label>
                     <label for="q6.2" class="center">
                         Kilma-Natur-Landwirtschaft
-                </label>
+                    </label>
                 </ons-list-item>
                 <ons-list-item tappable>
                     <label class="left">
@@ -446,14 +434,8 @@
                 </ons-list-item>
             </ons-list>
 
-            <section style="padding: 8px">
-                <ons-button modifier="large" onclick="fn.load('s1_p3.html')">Nächste Seite</ons-button>
-            </section>
-        </ons-page>
-    </template>
+            <hr />
 
-    <template id="s1_p3.html">
-        <ons-page>
             <ons-toolbar>
                 <div class="center">Umfrage zur Landtagswahl</div>
                 <div class="left" onclick="fn.load('s1_p2.html')">
@@ -521,12 +503,13 @@
 
             <hr />
 
-            <ons-list-header>Was denken Sie,wie hoch die prozentuale Wahlbeteiligung bei der letzten Landtagswahl war?
+            <ons-list-header>Was denken Sie,wie hoch die prozentuale Wahlbeteiligung bei der letzten Landtagswahl
+                war?
             </ons-list-header>
             <ons-list>
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="s1p3.11" input-id="q11.1"></ons-radio>
+                        <ons-radio name="s1p3.11" input-id="q11.1" value="0-20%"></ons-radio>
                     </label>
                     <label for="q11.1" class="center">
                         0-20%
@@ -574,8 +557,11 @@
                     <ons-input id="s1p3.12" modifier="underbar" placeholder="Antwort eingeben..." float></ons-input>
                 </p>
             </div>
+
+            <p id="test"></p>
+
             <section style="padding: 8px">
-                <ons-button modifier="large" onclick="notify()">Nächste Seite</ons-button>
+                <ons-button modifier="large" onclick="checkRadio1()">Nächste Seite</ons-button>
             </section>
         </ons-page>
     </template>
