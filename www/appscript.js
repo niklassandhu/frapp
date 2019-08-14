@@ -1,11 +1,11 @@
 window.fn = {};
 
-window.fn.open = function() {
+window.fn.open = function () {
   var menu = document.getElementById('menu');
   menu.open();
 };
 
-window.fn.load = function(page) {
+window.fn.load = function (page) {
   var content = document.getElementById('content');
   var menu = document.getElementById('menu');
   content.load(page)
@@ -13,13 +13,13 @@ window.fn.load = function(page) {
 };
 
 
-document.addEventListener('init', function(event) {
-  if(event.target.id == "home") {
+document.addEventListener('init', function (event) {
+  if (event.target.id == "home") {
     openDb();
   }
 });
 
-var notify = function() {
+var notify = function () {
   ons.notification.alert('Diese Funktion ist noch nicht verfügbar!');
 };
 
@@ -54,7 +54,7 @@ function checkRadio() {
     var c = document.getElementById("3.1").value;
     document.getElementById("test").innerHTML = c;
   };
-  
+
   if (document.getElementById("q3.2").checked) {
     var c = document.getElementById("q3.2").value;
     document.getElementById("test").innerHTML = c;
@@ -165,89 +165,79 @@ function checkRadio() {
     document.getElementById("test").innerHTML = h;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q9.1").checked) {
+    var i = document.getElementById("q9.1").value;
+    document.getElementById("test").innerHTML = i;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q9.2").checked) {
+    var i = document.getElementById("q9.2").value;
+    document.getElementById("test").innerHTML = i;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q9.3").checked) {
+    var i = document.getElementById("q9.3").value;
+    document.getElementById("test").innerHTML = i;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q10.1").checked) {
+    var j = document.getElementById("q10.1").value;
+    document.getElementById("test").innerHTML = j;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q10.2").checked) {
+    var j = document.getElementById("q10.2").value;
+    document.getElementById("test").innerHTML = j;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q10.3").checked) {
+    var j = document.getElementById("q10.3").value;
+    document.getElementById("test").innerHTML = j;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q11.1").checked) {
+    var k = document.getElementById("q11.1").value;
+    document.getElementById("test").innerHTML = k;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q11.2").checked) {
+    var k = document.getElementById("q11.2").value;
+    document.getElementById("test").innerHTML = k;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q11.3").checked) {
+    var k = document.getElementById("q11.3").value;
+    document.getElementById("test").innerHTML = k;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q11.4").checked) {
+    var k = document.getElementById("q11.4").value;
+    document.getElementById("test").innerHTML = k;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
-  };
-
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
-  };
-
-  if (document.getElementById("q1.2").checked) {
-    var x = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = x;
+  if (document.getElementById("q11.5").checked) {
+    var k = document.getElementById("q11.5").value;
+    document.getElementById("test").innerHTML = k;
   };
 }
 
-var createAlertDialog = function() {
+var createAlertDialog = function () {
   var dialog = document.getElementById('my-alert-dialog');
 
   if (dialog) {
     dialog.show();
   } else {
     ons.createElement('alert-dialog.html', { append: true })
-      .then(function(dialog) {
+      .then(function (dialog) {
         dialog.show();
       });
   }
 
-  setTimeout(hideAlertDialog,5000);
+  setTimeout(hideAlertDialog, 1000);
 
 };
 
-var hideAlertDialog = function() {
+var hideAlertDialog = function () {
   document
     .getElementById('my-alert-dialog')
     .hide();
@@ -264,15 +254,15 @@ function onSucces(tx, r) {
 }
 
 function openDb() {
-  db = openDatabase("SurveyOne", "1", "Wahl-Umfrage", 4096*4096);
+  db = openDatabase("SurveyOne", "1", "Wahl-Umfrage", 4096 * 4096);
 
-  db.transaction(function(tx) {
+  db.transaction(function (tx) {
     tx.executeSql("CREATE TABLE IF NOT EXISTS results (ID INTEGER PRIMARY KEY ASC, answer1 TEXT", []);
   });
 }
 
 function getData() {
-  db.transaction(function(tx) {
+  db.transaction(function (tx) {
     tx.executeSql("SELECT * FROM results", [], onSuccess, onError)
   })
 }
@@ -282,7 +272,7 @@ function addData() {
   var answer = document.getElementById("q1.1")
   var value = answer.value;
 
-  db.transaction(function(tx) {
+  db.transaction(function (tx) {
     tx.executeSql("INSERT INTO results (answer11) VALUES (?)", [value], onSucces, onError);
   });
 
