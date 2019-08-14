@@ -15,7 +15,7 @@ window.fn.load = function (page) {
 
 document.addEventListener('init', function (event) {
   if (event.target.id == "home") {
-    openDb();
+    var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
   }
 });
 
@@ -254,7 +254,7 @@ function onSucces(tx, r) {
 }
 
 function openDb() {
-  db = openDatabase("SurveyOne", "1", "Wahl-Umfrage", 4096 * 4096);
+  db = openDatabase("SurveyOne", "1", "Wahl-Umfrage", 1000000);
 
   db.transaction(function (tx) {
     tx.executeSql("CREATE TABLE IF NOT EXISTS results (ID INTEGER PRIMARY KEY ASC, answer1 TEXT", []);
@@ -278,7 +278,6 @@ function addData() {
 
   // reset var after input
 }
-
 
 // function renderItems(tx, r) {
 //   var output ="";
