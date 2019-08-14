@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="lib/css/onsenui.css">
+    <link rel="stylesheet" href="lib/css/onsen-css-components.min.css">
+    <script src="lib/js/onsenui.min.js"></script>
+</head>
+<body>
+        
+<!-- 11.Frage -->
+
+<template id="s1_q1.html">
+  <ons-page>
+      <ons-toolbar>
+          <div class="center">Umfrage zur Landtagswahl</div>
+          <div class="left" onclick="fn.load('survey.html')">
+              <ons-back-button>Back</ons-back-button>
+          </div>
+      </ons-toolbar>
+
+      <ons-list-header>Was denken Sie,wie hoch die prozentuale Wahlbeteiligung bei der letzten Landtagswahl war?</ons-list-header>
+
+      <ons-list>
+          <ons-list-item tappable>
+              <label class="left">
+                  <ons-radio name="color" input-id="radio-1" checked></ons-radio>
+              </label>
+              <label for="radio-1" class="center">
+                  0-20%
+              </label>
+          </ons-list-item>
+          
+          <ons-list-item tappable>
+              <label class="left">
+                  <ons-radio name="color" input-id="radio-2"></ons-radio>
+              </label>
+
+              <label for="radio-2" class="center">
+                  20-40%
+              </label>
+
+              <label for="radio-2" class="center">
+                  40-60%
+              </label>
+
+              <label for="radio-2" class="center">
+                  60-80%
+            </label>
+
+            <label for="radio-2" class="center">
+                80-100%
+            </label>
+
+          </ons-list-item>
+
+      </ons-list>
+
+      <center>
+          <ons-button ripple modifier="quiet" onclick="notify()">Nächste Frage</ons-button>
+      </center>
+  </ons-page>
+</template>
+
+</body>
+</html>
