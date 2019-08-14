@@ -38,7 +38,7 @@
     <!-- -------STARTSEITE------- -->
 
     <template id="home.html">
-        <ons-page>
+        <ons-page id="home">
             <ons-toolbar>
                 <div class="left">
                     <ons-toolbar-button onclick="fn.open()">
@@ -152,7 +152,7 @@
     <!-- -------Umfrage 1 Seite 1------- -->
 
     <template id="s1_p1.html">
-        <ons-page>
+        <ons-page id="s1_p1">
             <ons-toolbar>
                 <div class="center">Umfrage zur Landtagswahl</div>
                 <div class="left" onclick="fn.load('survey.html')">
@@ -436,13 +436,6 @@
 
             <hr />
 
-            <ons-toolbar>
-                <div class="center">Umfrage zur Landtagswahl</div>
-                <div class="left" onclick="fn.load('s1_p2.html')">
-                    <ons-back-button>Back</ons-back-button>
-                </div>
-            </ons-toolbar>
-
             <ons-list-header>Wissen Sie, welche parteien zur Wahl stehen?</ons-list-header>
             <ons-list>
                 <ons-list-item tappable>
@@ -570,17 +563,17 @@
 
     <template id="alert-dialog.html">
         <ons-alert-dialog id="my-alert-dialog" modifier="rowfooter">
-          <div class="alert-dialog-title">Speichern...</div>
-          <div class="alert-dialog-content">
-            Deine Antworten werden nun verarbeitet und gespeichert
-          </div>
-          <div class="alert-dialog-footer">
-            <!--<ons-alert-dialog-button onclick="hideAlertDialog()">Cancel</ons-alert-dialog-button>-->
-            <!--<ons-alert-dialog-button onclick="hideAlertDialog()">OK</ons-alert-dialog-button>-->
-            <ons-progress-bar indeterminate></ons-progress-bar>
-          </div>
+            <div class="alert-dialog-title">Speichern...</div>
+            <div class="alert-dialog-content">
+                Deine Antworten werden nun verarbeitet und gespeichert
+            </div>
+            <div class="alert-dialog-footer">
+                <!--<ons-alert-dialog-button onclick="hideAlertDialog()">Cancel</ons-alert-dialog-button>-->
+                <!--<ons-alert-dialog-button onclick="hideAlertDialog()">OK</ons-alert-dialog-button>-->
+                <ons-progress-bar indeterminate></ons-progress-bar>
+            </div>
         </ons-alert-dialog>
-      </template>
+    </template>
 
 </body>
 <script src="appscript.js"></script>
