@@ -26,197 +26,197 @@ var notify = function () {
 
 function checkRadio() {
   if (document.getElementById("q1.1").checked) {
-    var a = document.getElementById("q1.1").value;
+    a = document.getElementById("q1.1").value;
     document.getElementById("test").innerHTML = a;
   };
 
   if (document.getElementById("q1.2").checked) {
-    var a = document.getElementById("q1.2").value;
+    a = document.getElementById("q1.2").value;
     document.getElementById("test").innerHTML = a;
   };
 
   if (document.getElementById("q2.1").checked) {
-    var b = document.getElementById("q2.1").value;
+    b = document.getElementById("q2.1").value;
     document.getElementById("test").innerHTML = b;
   };
 
   if (document.getElementById("q2.2").checked) {
-    var b = document.getElementById("q2.2").value;
+    b = document.getElementById("q2.2").value;
     document.getElementById("test").innerHTML = b;
   };
 
   if (document.getElementById("q2.3").checked) {
-    var b = document.getElementById("q2.3").value;
+    b = document.getElementById("q2.3").value;
     document.getElementById("test").innerHTML = b;
   };
 
   if (document.getElementById("q3.1").checked) {
-    var c = document.getElementById("3.1").value;
+    c = document.getElementById("3.1").value;
     document.getElementById("test").innerHTML = c;
   };
 
   if (document.getElementById("q3.2").checked) {
-    var c = document.getElementById("q3.2").value;
+    c = document.getElementById("q3.2").value;
     document.getElementById("test").innerHTML = c;
   };
 
   if (document.getElementById("q3.3").checked) {
-    var c = document.getElementById("q3.3").value;
+    c = document.getElementById("q3.3").value;
     document.getElementById("test").innerHTML = c;
   };
 
   if (document.getElementById("q3.4").checked) {
-    var c = document.getElementById("q3.4").value;
+    c = document.getElementById("q3.4").value;
     document.getElementById("test").innerHTML = c;
   };
 
   if (document.getElementById("q3.5").checked) {
-    var c = document.getElementById("q3.5").value;
+    c = document.getElementById("q3.5").value;
     document.getElementById("test").innerHTML = c;
   };
 
   if (document.getElementById("q4.1").checked) {
-    var d = document.getElementById("q4.1").value;
+    d = document.getElementById("q4.1").value;
     document.getElementById("test").innerHTML = d;
   };
 
   if (document.getElementById("q4.2").checked) {
-    var d = document.getElementById("q4.2").value;
+    d = document.getElementById("q4.2").value;
     document.getElementById("test").innerHTML = d;
   };
 
   if (document.getElementById("q5.1").checked) {
-    var e = document.getElementById("q5.1").value;
+    e = document.getElementById("q5.1").value;
     document.getElementById("test").innerHTML = e;
   };
 
   if (document.getElementById("q5.2").checked) {
-    var e = document.getElementById("q5.2").value;
+    e = document.getElementById("q5.2").value;
     document.getElementById("test").innerHTML = e;
   };
 
   if (document.getElementById("q5.3").checked) {
-    var e = document.getElementById("q5.3").value;
+    e = document.getElementById("q5.3").value;
     document.getElementById("test").innerHTML = e;
   };
 
   if (document.getElementById("q5.4").checked) {
-    var e = document.getElementById("q5.4").value;
+    e = document.getElementById("q5.4").value;
     document.getElementById("test").innerHTML = e;
   };
 
   if (document.getElementById("q6.1").checked) {
-    var f = document.getElementById("q6.1").value;
+    f = document.getElementById("q6.1").value;
     document.getElementById("test").innerHTML = f;
   };
 
   if (document.getElementById("q6.2").checked) {
-    var f = document.getElementById("q6.2").value;
+    f = document.getElementById("q6.2").value;
     document.getElementById("test").innerHTML = f;
   };
 
   if (document.getElementById("q6.3").checked) {
-    var f = document.getElementById("q6.3").value;
+    f = document.getElementById("q6.3").value;
     document.getElementById("test").innerHTML = f;
   };
 
   if (document.getElementById("q6.4").checked) {
-    var f = document.getElementById("q6.4").value;
+    f = document.getElementById("q6.4").value;
     document.getElementById("test").innerHTML = f;
   };
 
   if (document.getElementById("q7.1").checked) {
-    var g = document.getElementById("q7.1").value;
+    g = document.getElementById("q7.1").value;
     document.getElementById("test").innerHTML = g;
   };
 
   if (document.getElementById("q7.2").checked) {
-    var g = document.getElementById("q7.2").value;
+    g = document.getElementById("q7.2").value;
     document.getElementById("test").innerHTML = g;
   };
 
   if (document.getElementById("q7.3").checked) {
-    var g = document.getElementById("q7.3").value;
+    g = document.getElementById("q7.3").value;
     document.getElementById("test").innerHTML = g;
   };
 
   if (document.getElementById("q8.1").checked) {
-    var h = document.getElementById("q8.1").value;
+    h = document.getElementById("q8.1").value;
     document.getElementById("test").innerHTML = h;
   };
 
   if (document.getElementById("q8.2").checked) {
-    var h = document.getElementById("q8.2").value;
+    h = document.getElementById("q8.2").value;
     document.getElementById("test").innerHTML = h;
   };
 
   if (document.getElementById("q8.3").checked) {
-    var h = document.getElementById("q8.3").value;
+    h = document.getElementById("q8.3").value;
     document.getElementById("test").innerHTML = h;
   };
 
   if (document.getElementById("q8.4").checked) {
-    var h = document.getElementById("q8.4").value;
+    h = document.getElementById("q8.4").value;
     document.getElementById("test").innerHTML = h;
   };
 
   if (document.getElementById("q8.5").checked) {
-    var h = document.getElementById("q8.5").value;
+    h = document.getElementById("q8.5").value;
     document.getElementById("test").innerHTML = h;
   };
 
   if (document.getElementById("q9.1").checked) {
-    var i = document.getElementById("q9.1").value;
+    i = document.getElementById("q9.1").value;
     document.getElementById("test").innerHTML = i;
   };
 
   if (document.getElementById("q9.2").checked) {
-    var i = document.getElementById("q9.2").value;
+    i = document.getElementById("q9.2").value;
     document.getElementById("test").innerHTML = i;
   };
 
   if (document.getElementById("q9.3").checked) {
-    var i = document.getElementById("q9.3").value;
+    i = document.getElementById("q9.3").value;
     document.getElementById("test").innerHTML = i;
   };
 
   if (document.getElementById("q10.1").checked) {
-    var j = document.getElementById("q10.1").value;
+    j = document.getElementById("q10.1").value;
     document.getElementById("test").innerHTML = j;
   };
 
   if (document.getElementById("q10.2").checked) {
-    var j = document.getElementById("q10.2").value;
+    j = document.getElementById("q10.2").value;
     document.getElementById("test").innerHTML = j;
   };
 
   if (document.getElementById("q10.3").checked) {
-    var j = document.getElementById("q10.3").value;
+    j = document.getElementById("q10.3").value;
     document.getElementById("test").innerHTML = j;
   };
 
   if (document.getElementById("q11.1").checked) {
-    var k = document.getElementById("q11.1").value;
+    k = document.getElementById("q11.1").value;
     document.getElementById("test").innerHTML = k;
   };
 
   if (document.getElementById("q11.2").checked) {
-    var k = document.getElementById("q11.2").value;
+    k = document.getElementById("q11.2").value;
     document.getElementById("test").innerHTML = k;
   };
 
   if (document.getElementById("q11.3").checked) {
-    var k = document.getElementById("q11.3").value;
+    k = document.getElementById("q11.3").value;
     document.getElementById("test").innerHTML = k;
   };
 
   if (document.getElementById("q11.4").checked) {
-    var k = document.getElementById("q11.4").value;
+    k = document.getElementById("q11.4").value;
     document.getElementById("test").innerHTML = k;
   };
 
   if (document.getElementById("q11.5").checked) {
-    var k = document.getElementById("q11.5").value;
+    k = document.getElementById("q11.5").value;
     document.getElementById("test").innerHTML = k;
   };
 }
