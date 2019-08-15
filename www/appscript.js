@@ -84,10 +84,21 @@ function addData() {
 // }
 
 function getData(); {
-  db.transaction(function (tx) {
-    tx.executeSql("SELECT answer FROM answers", [], renderItems, onError)
-  });
+
+  db.transaction(function (tx) { 
+    tx.executeSql('SELECT * FROM answers', [], function (tx, results) { 
+       var len = results.rows.length, i; 
+       msg = "<p>Found rows: " + len + "</p>"; 
+       document.querySelector('solution').innerHTML +=  msg; 
+
+       for (i = 0; i < len; i++) { 
+          msg = "<ons-list-item>" + results.rows.item(i).log + "</ons-list-item>"; 
+          document.querySelector('solution').innerHTML +=  msg; 
+       } 
+    }, null); 
+
 }
+
 
 
 var createAlertDialog = function () {
