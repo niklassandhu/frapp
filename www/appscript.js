@@ -183,7 +183,6 @@ function checkRadio() {
   };
 
   l = document.getElementById("q12.1").value;
-  document.getElementById("test").innerHTML = l;
 
   addData();
 }
