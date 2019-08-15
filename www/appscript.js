@@ -65,12 +65,6 @@ function addData() {
   });
 }
 
-function getData() {
-  db.transaction(function (tx) {
-    tx.executeSql("SELECT * FROM answers", [], renderItems, onError)
-  });
-}
-
 function renderItems(tx, rs) {
   var output = "";
   var list = document.getElementById('solution');
@@ -81,6 +75,12 @@ function renderItems(tx, rs) {
   }
 
   list.innerHTML = output;
+}
+
+function getData() {
+  db.transaction(function (tx) {
+    tx.executeSql("SELECT * FROM answers", [], renderItems, onError)
+  });
 }
 
 var createAlertDialog = function () {
