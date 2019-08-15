@@ -1,6 +1,7 @@
 window.fn = {};
 var db = null;
 var a = "";
+openDb();
 
 window.fn.open = function () {
   var menu = document.getElementById('menu');
@@ -27,7 +28,6 @@ var notify = function () {
 
 
 function checkRadio() {
-  openDb();
   if (document.getElementById("q1.1").checked) {
     a = document.getElementById("q1.1").value;
   };
