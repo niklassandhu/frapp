@@ -74,12 +74,12 @@ function getData() {
   });
 }
 
-function renderItems(tx, r) {
+function renderItems(tx, rs) {
   var output ="";
   var list = document.getElementById('ergebnisse_s1');
 
   for(i = 0; i < rs.rows.lenght; i++) {
-    var row = rs.rows.answers(i);
+    var row = rs.rows.answer1(i);
     output += "<ons-list-item>" + row.item + "</ons-list-item>";
   }
 
