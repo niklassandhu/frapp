@@ -79,7 +79,7 @@ function renderItems(tx, rs) {
 
 function getData() {
   db.transaction(function (tx) {
-    tx.executeSql("SELECT * FROM answers", [], renderItems, onError)
+    tx.executeSql("SELECT answer FROM answers", [], renderItems, onError)
   });
 }
 
