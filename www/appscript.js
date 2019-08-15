@@ -1,6 +1,5 @@
 window.fn = {};
 var db = null;
-openDb();
 
 window.fn.open = function () {
   var menu = document.getElementById('menu');
@@ -31,9 +30,9 @@ function checkRadio() {
     a = document.getElementById("q1.1").value;
   };
 
-  // if (document.getElementById("q1.2").checked) {
-  //   a = document.getElementById("q1.2").value;
-  // };
+  if (document.getElementById("q1.2").checked) {
+    a = document.getElementById("q1.2").value;
+  };
   addData();
 }
 
