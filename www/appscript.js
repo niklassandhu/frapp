@@ -85,20 +85,7 @@ function addData() {
 
 function getData(); {
   db.transaction(function (tx) {
-<<<<<<< HEAD
     tx.executeSql("SELECT answer FROM answers", [], renderItems, onError)
-=======
-    tx.executeSql('SELECT * FROM answers', [], function (tx, results) {
-      var len = results.rows.length, i;
-      msg = "<p>Found rows: " + len + "</p>";
-      document.querySelector('solution').innerHTML += msg;
-
-      for (i = 0; i < len; i++) {
-        alert(results.rows.item(i).log);
-      }
-
-    }, null);
->>>>>>> f46c00e192d3f1877f844f77a42e86cf97fbbb30
   });
 }
 
