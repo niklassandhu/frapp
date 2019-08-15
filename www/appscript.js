@@ -221,11 +221,12 @@ function getData() {
   db.transaction(function (tx) {
     tx.executeSql('SELECT * FROM answers', [], function (tx, results) {
       var len = results.rows.length, i;
-      msg = "<p>Found rows: " + len + "</p>";
+      msg = "<p>Datensätze gefunden: " + len + "</p>";
       document.getElementById('solution').innerHTML += msg;
 
       for (i = 0; i < len; i++) {
-        msg = "<ons-list-item>" + results.rows.item(i).answer1 + "</ons-list-item>";
+
+        msg = "<ons-row><ons-col>" + results.rows.item(i).answer1 + "</ons-col><ons-col>" + results.rows.item(i).answer2 + "</ons-col><ons-col>" + results.rows.item(i).answer3 + "</ons-col><ons-col>" + results.rows.item(i).answer4 + "</ons-col><ons-col>" + results.rows.item(i).answer5 + "</ons-col><ons-col>" + results.rows.item(i).answer6 + "</ons-col><ons-col>" + results.rows.item(i).answer7 + "</ons-col><ons-col>" + results.rows.item(i).answer8 + "</ons-col><ons-col>" + results.rows.item(i).answer9 + "</ons-col><ons-col>" + results.rows.item(i).answer10 + "</ons-col><ons-col>" + results.rows.item(i).answer11 + "</ons-col><ons-col>" + results.rows.item(i).answer12 + "</ons-col></ons-row>";
         document.getElementById('solution').innerHTML += msg;
       }
     }, null);
