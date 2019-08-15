@@ -1,17 +1,6 @@
 window.fn = {};
 var db = null;
-a = "";
-b = "";
-c = "";
-d = "";
-e = "";
-f = "";
-g = "";
-h = "";
-i = "";
-j = "";
-k = "";
-l = "";
+var a = "";
 
 window.fn.open = function () {
   var menu = document.getElementById('menu');
@@ -38,14 +27,13 @@ var notify = function () {
 
 
 function checkRadio() {
+  openDb();
   if (document.getElementById("q1.1").checked) {
     a = document.getElementById("q1.1").value;
-    document.getElementById("test").innerHTML = a;
   };
 
   if (document.getElementById("q1.2").checked) {
     a = document.getElementById("q1.2").value;
-    document.getElementById("test").innerHTML = a;
   };
   addData();
 }
@@ -74,9 +62,9 @@ function openDb() {
 
 function addData() {
   db.transaction(function (tx) {
+    document.getElementById("test").innerHTML = a;
     tx.executeSql("INSERT INTO answers (answer1) VALUES (?)", [a], onSucces, onError);
   });
-  a = "";
 }
 
 function getData() {
