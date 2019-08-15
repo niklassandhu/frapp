@@ -70,7 +70,7 @@ function addData() {
 
 function getData() {
   db.transaction(function (tx) {
-    tx.executeSql("SELECT * FROM answers", [], onSucces, onError)
+    tx.executeSql("SELECT * FROM answers", [], renderItems, onError)
   });
 }
 
@@ -79,7 +79,7 @@ function renderItems(tx, r) {
   var list = document.getElementById('ergebnisse_s1');
 
   for(i = 0; i < rs.rows.lenght; i++) {
-    var row = rs.rows.answer1(i);
+    var row = rs.rows.answers(i);
     output += "<ons-list-item>" + row.item + "</ons-list-item>";
   }
 
