@@ -206,11 +206,11 @@ var hideAlertDialog = function () {
 };
 
 function onError(tx, e) {
-  alert("Etwas ist fehlgeschlagen:" + e.Message);
+  alert("Etwas ist fehlgeschlagen:");
 }
 
 function onSucces(tx, r) {
-  alert("Vorgang erfolgreich:" + r.Message);
+  alert("Vorgang erfolgreich:");
 }
 
 function openDb() {
@@ -258,5 +258,5 @@ var createAlertDialog = function () {
       });
   }
 
-  setTimeout(hideAlertDialog, 1000);
+  setTimeout(hideAlertDialog, 5000);
 };
