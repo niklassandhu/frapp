@@ -40,10 +40,12 @@ var notify = function () {
 function checkRadio() {
   if (document.getElementById("q1.1").checked) {
     a = document.getElementById("q1.1").value;
+    document.getElementById("test").innerHTML = a;
   };
 
   if (document.getElementById("q1.2").checked) {
     a = document.getElementById("q1.2").value;
+    document.getElementById("test").innerHTML = a;
   };
 }
 
@@ -61,23 +63,23 @@ function onSucces(tx, r) {
 }
 
 function openDb() {
-  db = openDatabase("Peter", "1", "Wahl-Umfrage", 4096 * 4096);
+  db = openDatabase("umfrage", "1", "Wahl-Umfrage", 4096 * 4096);
 
   db.transaction(function (tx) {
-    tx.executeSql("CREATE TABLE IF NOT EXISTS klaus (ID INTEGER PRIMARY KEY ASC, answer1 TEXT", []);
+    tx.executeSql("CREATE TABLE IF NOT EXISTS answers (ID INTEGER PRIMARY KEY ASC, answer1 TEXT", []);
   });
 }
 
 function addData() {
   db.transaction(function (tx) {
-    tx.executeSql("INSERT INTO klaus (answer1) VALUES (?)", [a], onSucces, onError);
+    tx.executeSql("INSERT INTO answers (answer1) VALUES (?)", [a], onSucces, onError);
   });
   a = "";
 }
 
 function getData() {
   db.transaction(function (tx) {
-    tx.executeSql("SELECT * FROM klaus", [], renderItems, onError)
+    tx.executeSql("SELECT * FROM answers", [], renderItems, onError)
   });
 }
 
