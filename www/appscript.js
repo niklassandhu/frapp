@@ -225,19 +225,6 @@ function addData() {
   db.transaction(function (tx) {
     tx.executeSql("INSERT INTO answers (answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10, answer11, answer12) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [a, b, c, d, e, f, g, h, i, j, k, l], onSucces, onError);
   });
-
-  a = "";
-  b = "";
-  c = "";
-  d = "";
-  e = "";
-  f = "";
-  g = "";
-  h = "";
-  i = "";
-  j = "";
-  k = "";
-  l = "";
 }
 
 
