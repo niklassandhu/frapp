@@ -89,11 +89,11 @@ function getData() {
     tx.executeSql('SELECT * FROM answers', [], function (tx, results) { 
        var len = results.rows.length, i; 
        msg = "<p>Found rows: " + len + "</p>"; 
-       document.querySelector('solution').innerHTML +=  msg; 
+       document.getElementById('solution').innerHTML +=  msg; 
 
        for (i = 0; i < len; i++) { 
           msg = "<ons-list-item>" + results.rows.item(i).log + "</ons-list-item>"; 
-          document.querySelector('solution').innerHTML +=  msg; 
+          document.getElementById('solution').innerHTML +=  msg; 
        } 
     }, null);
   }); 
