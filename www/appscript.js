@@ -67,8 +67,6 @@ function addData() {
   });
 
   a = "";
-  fn.load("answers.html");
-
 }
 
 function getData() {
