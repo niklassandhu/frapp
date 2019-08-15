@@ -64,22 +64,37 @@ function addData() {
   });
 }
 
-function renderItems(tx, rs) {
-  var output = "";
-  liste = document.getElementById('solution');
+// function renderItems(tx, rs) {
+//   var output = "";
+//   liste = document.getElementById('solution');
 
-  for (i = 0; i < rs.rows.lenght; i++) {
+//   for (i = 0; i < rs.rows.lenght; i++) {
 
-    var row = rs.rows.item(i);
-    output += "<ons-list-item>" + row.item + "</ons-list-item>";
-  }
+//     var row = rs.rows.answer(i);
+//     output += "<ons-list-item>" + row.item + "</ons-list-item>";
+//   }
 
-  liste.innerHTML = output;
-}
+//   liste.innerHTML = output;
+// }
 
-function getData() {
+// function getData() {
+//   db.transaction(function (tx) {
+//     tx.executeSql("SELECT * FROM answers", [], renderItems, onError)
+//   });
+// }
+
+function getData(); {
   db.transaction(function (tx) {
-    tx.executeSql("SELECT * FROM answers", [], renderItems, onError)
+    tx.executeSql('SELECT * FROM answers', [], function (tx, results) {
+      var len = results.rows.length, i;
+      msg = "<p>Found rows: " + len + "</p>";
+      document.querySelector('solution').innerHTML += msg;
+
+      for (i = 0; i < len; i++) {
+        alert(results.rows.item(i).log);
+      }
+
+    }, null);
   });
 }
 
