@@ -264,8 +264,20 @@ function openDb() {
 
 function getData() {
   db.transaction(function (tx) {
-    tx.executeSql("SELECT * FROM results", [], onSuccess, onError)
-  })
+    tx.executeSql("SELECT * FROM results", [], renderItems, onError)
+  });
+}
+
+function renderItems(tx, r) {
+  var output ="";
+  var list = document.getElementById('ergebnisse_s1');
+
+  for(i = 0; i < resizeBy.rows.lenght; i++) {
+    var row = rs.rows.answer1(i);
+    output += "<ons-list-item>" + row.item + "</ons-list-item>";
+  }
+
+  list.innerHTML = output;
 }
 
 
@@ -279,8 +291,3 @@ function addData() {
 
   // reset var after input
 }
-
-
-// function renderItems(tx, r) {
-//   var output ="";
-// }

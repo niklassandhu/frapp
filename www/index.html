@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
+
 <head>
     <link rel="stylesheet" href="lib/css/onsenui.css">
     <link rel="stylesheet" href="lib/css/onsen-css-components.css">
@@ -410,7 +411,8 @@
                 </ons-list-item>
                 <ons-list-item tappable>
                     <label class="left">
-                        <ons-radio name="s1p2.8" input-id="q8.3" value="Öffentliche Veranstaltungen der Parteien"></ons-radio>
+                        <ons-radio name="s1p2.8" input-id="q8.3" value="Öffentliche Veranstaltungen der Parteien">
+                        </ons-radio>
                     </label>
                     <label for="q8.3" class="center">
                         Öffentliche Veranstaltungen der Parteien
@@ -574,6 +576,28 @@
                 <ons-progress-bar indeterminate></ons-progress-bar>
             </div>
         </ons-alert-dialog>
+    </template>
+
+    <template id="answers.html">
+        <ons-page id="answers">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Ergebnisse Umfrage 1
+                </div>
+            </ons-toolbar>
+
+            <section style="padding: 8px">
+                <ons-button modifier="large" onclick="getItem()">Ergebnisse laden</ons-button>
+            </section>
+
+            <ons-list id="ergebnisse_s1"></ons-list>
+
+        </ons-page>
     </template>
 
 </body>
