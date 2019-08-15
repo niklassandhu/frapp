@@ -69,7 +69,8 @@ function renderItems(tx, rs) {
   liste = document.getElementById('solution');
 
   for (i = 0; i < rs.rows.lenght; i++) {
-    var row = rs.rows.answer(i);
+
+    var row = rs.rows.item(i);
     output += "<ons-list-item>" + row.item + "</ons-list-item>";
   }
 
@@ -81,6 +82,7 @@ function getData() {
     tx.executeSql("SELECT * FROM answers", [], renderItems, onError)
   });
 }
+
 
 var createAlertDialog = function () {
   var dialog = document.getElementById('alert-dialog');
