@@ -1,6 +1,5 @@
 window.fn = {};
 var db = null;
-var a = "";
 openDb();
 
 window.fn.open = function () {
@@ -32,9 +31,9 @@ function checkRadio() {
     a = document.getElementById("q1.1").value;
   };
 
-  if (document.getElementById("q1.2").checked) {
-    a = document.getElementById("q1.2").value;
-  };
+  // if (document.getElementById("q1.2").checked) {
+  //   a = document.getElementById("q1.2").value;
+  // };
   addData();
 }
 
@@ -61,12 +60,9 @@ function openDb() {
 }
 
 function addData() {
-  document.getElementById("test").innerHTML = a;
   db.transaction(function (tx) {
     tx.executeSql("INSERT INTO answers (answer) VALUES (?)", [a], onSucces, onError);
   });
-
-  a = "";
 }
 
 function getData() {
