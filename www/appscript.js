@@ -92,7 +92,7 @@ function getData() {
        document.getElementById('solution').innerHTML +=  msg; 
 
        for (i = 0; i < len; i++) { 
-          msg = "<ons-list-item>" + results.rows.item(i) + "</ons-list-item>"; 
+          msg = "<ons-list-item>" + results.rows.item(i).text + "</ons-list-item>"; 
           document.getElementById('solution').innerHTML +=  msg; 
        } 
     }, null);
