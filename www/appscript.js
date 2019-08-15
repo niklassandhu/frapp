@@ -270,7 +270,7 @@ function getData() {
 
 
 function addData() {
-  var answer = document.getElementById("q1.1")
+  var answer = document.getElementById("q1.1");
   var value = answer.value;
 
   db.transaction(function (tx) {
