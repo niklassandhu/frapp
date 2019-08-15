@@ -220,6 +220,13 @@ function checkRadio() {
     k = document.getElementById("q11.5").value;
     document.getElementById("test").innerHTML = k;
   };
+
+  if (document.getElementById("q12.1").change) {
+    
+    l = document.getElementById("q12.1").value;
+    document.getElementById("test").innerHTML = l;
+  };
+
 }
 
 var createAlertDialog = function () {
@@ -270,12 +277,59 @@ function getData() {
 
 
 function addData() {
-  var answer = document.getElementById("q1.1");
-  var value = answer.value;
 
   db.transaction(function (tx) {
-    tx.executeSql("INSERT INTO results (answer11) VALUES (?)", [value], onSucces, onError);
+    tx.executeSql("INSERT INTO results (answer1) VALUES (?)", [a], onSucces, onError);
   });
+
+   {
+    tx.executeSql("INSERT INTO results (answer2) VALUES (?)", [b], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer3) VALUES (?)", [c], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer4) VALUES (?)", [d], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer5) VALUES (?)", [e], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer6) VALUES (?)", [f], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer7) VALUES (?)", [g], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer8) VALUES (?)", [h], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer9) VALUES (?)", [i], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer10) VALUES (?)", [j], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer11) VALUES (?)", [k], onSucces, onError);
+  };
+
+   {
+    tx.executeSql("INSERT INTO results (answer12) VALUES (?)", [l], onSucces, onError);
+  };
+
+
+
+
+
 
   // reset var after input
 }
