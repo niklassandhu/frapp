@@ -47,11 +47,13 @@ function checkRadio() {
     a = document.getElementById("q1.2").value;
     document.getElementById("test").innerHTML = a;
   };
+  addData();
 }
 
 var hideAlertDialog = function () {
   document.getElementById('alert-dialog')
     .hide();
+    checkRadio();
 };
 
 function onError(tx, e) {
@@ -108,7 +110,4 @@ var createAlertDialog = function () {
   }
 
   setTimeout(hideAlertDialog, 1000);
-  checkRadio();
-  addData();
-
 };
