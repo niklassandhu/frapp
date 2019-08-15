@@ -83,7 +83,7 @@ function addData() {
 //   });
 // }
 
-function getData(); {
+function getData() {
 
   db.transaction(function (tx) { 
     tx.executeSql('SELECT * FROM answers', [], function (tx, results) { 
@@ -95,10 +95,9 @@ function getData(); {
           msg = "<ons-list-item>" + results.rows.item(i).log + "</ons-list-item>"; 
           document.querySelector('solution').innerHTML +=  msg; 
        } 
-    }, null); 
-
+    }, null);
+  }); 
 }
-
 
 
 var createAlertDialog = function () {
