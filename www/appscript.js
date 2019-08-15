@@ -56,7 +56,7 @@ function openDb() {
   db = openDatabase("umfrage", "1", "Wahl-Umfrage", 100000);
 
   db.transaction(function (tx) {
-    tx.executeSql("CREATE TABLE IF NOT EXISTS answers (ID INTEGER PRIMARY KEY ASC, answer1 TEXT", []);
+    tx.executeSql("CREATE TABLE IF NOT EXISTS answers (ID INTEGER PRIMARY KEY ASC, answer1 TEXT)", []);
   });
 }
 
