@@ -64,7 +64,7 @@ function addData() {
   var x = "Hallo Welt"
   document.getElementById("test").innerHTML = a;
   db.transaction(function (tx) {
-    tx.executeSql("INSERT INTO answers (answer1) VALUES (?)", [x], onSucces, onError);
+    tx.executeSql("INSERT INTO answers (ID, answer1) VALUES (?)", [x], onSucces, onError);
   });
 }
 
