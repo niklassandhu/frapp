@@ -27,6 +27,9 @@
                     <ons-list-item tappable onclick="fn.load('survey.html')" tappable>
                         Umfragen
                     </ons-list-item>
+                    <ons-list-item tappable onclick="fn.load('answers.html')" tappable>
+                        Ergebnisse
+                    </ons-list-item>
                     <ons-list-item tappable onclick="fn.load('about.html')" tappable>
                         Über
                     </ons-list-item>
@@ -556,7 +559,7 @@
             <p id="test"></p>
 
             <section style="padding: 8px">
-                <ons-button modifier="large" onclick="checkRadio()">Speichern</ons-button>
+                <ons-button modifier="large" onclick="createAlertDialog()">Speichern</ons-button>
             </section>
         </ons-page>
     </template>
@@ -564,7 +567,7 @@
     <!-- Speichern Dialog -->
 
     <template id="alert-dialog.html">
-        <ons-alert-dialog id="my-alert-dialog" modifier="rowfooter">
+        <ons-alert-dialog id="alert-dialog" modifier="rowfooter">
             <div class="alert-dialog-title">Speichern...</div>
             <div class="alert-dialog-content">
                 Deine Antworten werden nun verarbeitet und gespeichert
@@ -592,7 +595,7 @@
             </ons-toolbar>
 
             <section style="padding: 8px">
-                <ons-button modifier="large" onclick="getItem()">Ergebnisse laden</ons-button>
+                <ons-button modifier="large" onclick="getData()">Ergebnisse laden</ons-button>
             </section>
 
             <ons-list id="ergebnisse_s1"></ons-list>
