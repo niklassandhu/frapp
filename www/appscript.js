@@ -70,7 +70,7 @@ function addData() {
 
 function getData() {
   db.transaction(function (tx) {
-    tx.executeSql("SELECT * FROM answers", [], renderItems, onError)
+    tx.executeSql("SELECT * FROM answers", [], onSucces, onError)
   });
 }
 
