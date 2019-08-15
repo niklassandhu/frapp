@@ -47,7 +47,7 @@ function checkRadio() {
   };
 
   if (document.getElementById("q3.1").checked) {
-    c = document.getElementById("3.1").value;
+    c = document.getElementById("q3.1").value;
   };
 
   if (document.getElementById("q3.2").checked) {
