@@ -66,14 +66,14 @@ function addData() {
 
 function renderItems(tx, rs) {
   var output = "";
-  var list = document.getElementById('solution');
+  liste = document.getElementById('solution');
 
   for (i = 0; i < rs.rows.lenght; i++) {
     var row = rs.rows.answer(i);
     output += "<ons-list-item>" + row.item + "</ons-list-item>";
   }
 
-  list.innerHTML = output;
+  liste.innerHTML = output;
 }
 
 function getData() {
