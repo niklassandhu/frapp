@@ -53,7 +53,7 @@ function onSucces(tx, r) {
 }
 
 function openDb() {
-  db = openDatabase("umfrage", "1", "Wahl-Umfrage", 4096 * 4096);
+  db = openDatabase("umfrage", "1", "Wahl-Umfrage", 100000);
 
   db.transaction(function (tx) {
     tx.executeSql("CREATE TABLE IF NOT EXISTS answers (ID INTEGER PRIMARY KEY ASC, answer1 TEXT", []);
