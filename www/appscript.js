@@ -41,6 +41,10 @@ function checkRadio() {
   if (document.getElementById("q1.1").checked) {
     a = document.getElementById("q1.1").value;
   };
+
+  if (document.getElementById("q1.2").checked) {
+    a = document.getElementById("q1.2").value;
+  };
 }
 
 var hideAlertDialog = function () {
