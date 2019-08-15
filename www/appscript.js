@@ -41,7 +41,7 @@ function checkRadio() {
 var hideAlertDialog = function () {
   document.getElementById('alert-dialog')
     .hide();
-    checkRadio();
+  checkRadio();
 };
 
 function onError(tx, e) {
@@ -56,16 +56,19 @@ function openDb() {
   db = openDatabase("umfrage", "1", "Wahl-Umfrage", 100000);
 
   db.transaction(function (tx) {
-    tx.executeSql("CREATE TABLE IF NOT EXISTS answers (ID INTEGER PRIMARY KEY ASC, answer1 TEXT)", []);
+    tx.executeSql("CREATE TABLE IF NOT EXISTS answers (ID INTEGER PRIMARY KEY ASC, answer TEXT)", []);
   });
 }
 
 function addData() {
-  var x = "Hallo Welt"
   document.getElementById("test").innerHTML = a;
   db.transaction(function (tx) {
-    tx.executeSql("INSERT INTO answers (answer1) VALUES (?)", [x], onSucces, onError);
+    tx.executeSql("INSERT INTO answers (answer) VALUES (?)", [a], onSucces, onError);
   });
+
+  a = "";
+  fn.load("answers.html");
+
 }
 
 function getData() {
@@ -75,11 +78,11 @@ function getData() {
 }
 
 function renderItems(tx, rs) {
-  var output ="";
-  var list = document.getElementById('ergebnisse_s1');
+  var output = "";
+  var list = document.getElementById('solution');
 
-  for(i = 0; i < rs.rows.lenght; i++) {
-    var row = rs.rows.answer1(i);
+  for (i = 0; i < rs.rows.lenght; i++) {
+    var row = rs.rows.answer(i);
     output += "<ons-list-item>" + row.item + "</ons-list-item>";
   }
 
