@@ -61,8 +61,8 @@ function openDb() {
 }
 
 function addData() {
+  document.getElementById("test").innerHTML = a;
   db.transaction(function (tx) {
-    document.getElementById("test").innerHTML = a;
     tx.executeSql("INSERT INTO answers (answer1) VALUES (?)", [a], onSucces, onError);
   });
 }
