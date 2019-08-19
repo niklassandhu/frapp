@@ -206,11 +206,11 @@ var hideAlertDialog = function () {
 };
 
 function onError(tx, e) {
-  alert("Etwas ist fehlgeschlagen:");
+  alert("Etwas ist fehlgeschlagen");
 }
 
 function onSucces(tx, r) {
-  alert("Vorgang erfolgreich:");
+  alert("Vorgang erfolgreich");
 }
 
 function openDb() {
@@ -240,6 +240,7 @@ function getData() {
 
         msg = "<ons-row><ons-col><ons-list-item>" + results.rows.item(i).answer1 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer2 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer3 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer4 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer5 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer6 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer7 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer8 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer9 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer10 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer11 + "</ons-list-item></ons-col><ons-col><ons-list-item>" + results.rows.item(i).answer12 + "</ons-list-item></ons-col></ons-row>";
         document.getElementById('solution').innerHTML += msg;
+        msg = "";
       }
     }, null);
   });

@@ -54,16 +54,29 @@
                 </div>
             </ons-toolbar>
 
-            <ons-card>
+
+            <ons-card style="position: absolute; top: 25%; margin: 0; width: 100%">
+                <div class="title">
+                    Frapp - Wahlumfragen-App
+                </div>
                 <div class="content">
                     <ons-list-item>
-                        <marquee>Es sind neue Umfragen verfügbar!</marquee>
+                        <marquee>Verfügbare Umfragen: Wahl-Umfrage</marquee>
                     </ons-list-item>
                 </div>
                 <ons-button modifier="large" id="button" onclick="fn.load('survey.html')" , font-size: 17px>
                     Umfragen starten
                 </ons-button>
+                <hr />
+                <ons-button modifier="large" id="button" onclick="fn.load('answers.html')" , font-size: 17px>
+                    Ergebnisse ansehen
+                </ons-button>
             </ons-card>
+
+            <ons-card style="position: fixed; left: 0; bottom: 0; width: 95%; text-align: center;">
+                <div class="content">Build: 1.2_190819_2151 (19.08.19)</div>
+            </ons-card>
+
         </ons-page>
     </template>
 
@@ -94,7 +107,7 @@
                     </ons-card>
                 </ons-list-item>
 
-                <ons-list-item tappable onclick="createAlertDialog()">
+                <ons-list-item tappable onclick="notify()">
                     <ons-card style="width: 100%">
                         <div class="title">
                             Beispielumfrage
@@ -106,12 +119,15 @@
                 </ons-list-item>
             </ons-list>
 
+            <ons-card style="position: fixed; left: 0; bottom: 0; width: 95%; text-align: center;">
+                <div class="content">Build: 1.2_190819_2151 (19.08.19)</div>
+            </ons-card>
+
         </ons-page>
     </template>
 
 
-    <!-- -------Über uns Seite------- -->
-
+    <!-- Über Seite -->
     <template id="about.html">
         <ons-page>
             <ons-toolbar>
@@ -140,14 +156,14 @@
 
             <ons-card>
                 <div class="title">
-                    App Version
+                    Sponsoren
                 </div>
-                <div class="content">
-                    <ons-list>
-                        <ons-list-item>1.0_150819_2358</ons-list-item>
-                        <ons-list-item>Last Update: 15.08.2019</ons-list-item>
-                    </ons-list>
-                </div>
+                <img src="lib/pic/expert.png" alt="Frapp" style="width: 100%">
+                <img src="lib/pic/nkls-dev.png" alt="Frapp" style="width: 100%">
+            </ons-card>
+
+            <ons-card style="position: fixed; left: 0; bottom: 0; width: 95%; text-align: center;">
+                <div class="content">Build: 1.2_190819_2151 (19.08.19)</div>
             </ons-card>
 
         </ons-page>
@@ -392,7 +408,7 @@
 
             <hr />
 
-            <ons-list-header>Welche Art von Medien nutzen Sie um sich politisch zu informieren?</ons-list-header>
+            <ons-list-header>Welche Art von Medien nutzen Sie, um sich politisch zu informieren?</ons-list-header>
             <ons-list>
                 <ons-list-item tappable>
                     <label class="left">
@@ -441,7 +457,7 @@
 
             <hr />
 
-            <ons-list-header>Wissen Sie, welche parteien zur Wahl stehen?</ons-list-header>
+            <ons-list-header>Wissen Sie, welche Parteien zur Wahl stehen?</ons-list-header>
             <ons-list>
                 <ons-list-item tappable>
                     <label class="left">
@@ -578,6 +594,8 @@
         </ons-alert-dialog>
     </template>
 
+    <!-- Ergebnisse-->
+
     <template id="answers.html">
         <ons-page id="answers">
             <ons-toolbar>
@@ -587,7 +605,7 @@
                     </ons-toolbar-button>
                 </div>
                 <div class="center">
-                    Ergebnisse Umfrage 1
+                    Ergebnisse Wahl-Umfrage
                 </div>
             </ons-toolbar>
 
@@ -597,6 +615,14 @@
 
             <ons-list id="solution">
             </ons-list>
+
+            <br />
+            <br />
+            <br />
+
+            <ons-card style="position: fixed; left: 0; bottom: 0; width: 95%; text-align: center;">
+                <div class="content">Build: 1.2_190819_2151 (19.08.19)</div>
+            </ons-card>
         </ons-page>
     </template>
 
