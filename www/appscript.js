@@ -233,6 +233,7 @@ function getData() {
   db.transaction(function (tx) {
     tx.executeSql('SELECT * FROM answers', [], function (tx, results) {
       var len = results.rows.length, i;
+      document.getElementById('solution').innerHTML = "";
       msg = "<p>Datensätze gefunden: " + len + "</p>";
       document.getElementById('solution').innerHTML += msg;
 
