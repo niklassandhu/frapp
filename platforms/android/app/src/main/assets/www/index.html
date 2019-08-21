@@ -1,18 +1,632 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
+
 <head>
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="lib/css/onsenui.css">
+    <link rel="stylesheet" href="lib/css/onsen-css-components.css">
+    <script src="lib/js/onsenui.js"></script>
+    <script src="cordova.js"></script>
 </head>
+
 <body>
 
-<ons-page id="index.html">
-  <ons-toolbar>
-    <div class="center">Frapp</div>
-  </ons-toolbar>
-  <ons-button modifier= "large" id="button" onclick="window.location.href='menu.html'" style="background-color:#546E7A"> Get started</ons-button>
-</ons-page>
+    <ons-splitter>
+        <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+            <ons-page>
+                <ons-list>
+                    <ons-card>
+                        <img src="lib/pic/header_logo.png" alt="Frapp" style="width: 100%">
+                        <div class="title">
+                            Frapp
+                        </div>
+                    </ons-card>
+                    <ons-list-item tappable onclick="fn.load('home.html')" tappable>
+                        Start
+                    </ons-list-item>
+                    <ons-list-item tappable onclick="fn.load('survey.html')" tappable>
+                        Umfragen
+                    </ons-list-item>
+                    <ons-list-item tappable onclick="fn.load('answers.html')" tappable>
+                        Ergebnisse
+                    </ons-list-item>
+                    <ons-list-item tappable onclick="fn.load('about.html')" tappable>
+                        Über
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+    </ons-splitter>
+
+    <!-- -------STARTSEITE------- -->
+
+    <template id="home.html">
+        <ons-page id="home">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Frapp - Start
+                </div>
+            </ons-toolbar>
+
+
+            <ons-card style="position: absolute; top: 25%; margin: 0; width: 100%">
+                <div class="title">
+                    Frapp - Wahlumfragen-App
+                </div>
+                <div class="content">
+                    <ons-list-item>
+                        <marquee>Verfügbare Umfragen: Wahl-Umfrage</marquee>
+                    </ons-list-item>
+                </div>
+                <ons-button modifier="large" id="button" onclick="fn.load('survey.html')" , font-size: 17px>
+                    Umfragen starten
+                </ons-button>
+                <hr />
+                <ons-button modifier="large" id="button" onclick="fn.load('answers.html')" , font-size: 17px>
+                    Ergebnisse ansehen
+                </ons-button>
+            </ons-card>
+
+            <ons-card style="position: fixed; left: 0; bottom: 0; width: 95%; text-align: center;">
+                <div class="content">Build: 1.2_190819_2151 (19.08.19)</div>
+            </ons-card>
+
+        </ons-page>
+    </template>
+
+    <!-- -------Umfrageseite------- -->
+
+    <template id="survey.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Umfragen
+                </div>
+            </ons-toolbar>
+
+            <ons-list>
+                <ons-list-item tappable onclick="fn.load('s1_p1.html')">
+                    <ons-card style="width: 100%">
+                        <div class="title">
+                            Umfrage zur Landtagswahl
+                        </div>
+                        <div class="content">
+                            <ons-list-item>Hier können einige Informationen zur Umfrage stehen</ons-list-item>
+                        </div>
+                    </ons-card>
+                </ons-list-item>
+
+                <ons-list-item tappable onclick="notify()">
+                    <ons-card style="width: 100%">
+                        <div class="title">
+                            Beispielumfrage
+                        </div>
+                        <div class="content">
+                            <ons-list-item>Hier können einige Informationen zur Umfrage stehen</ons-list-item>
+                        </div>
+                    </ons-card>
+                </ons-list-item>
+            </ons-list>
+
+            <ons-card style="position: fixed; left: 0; bottom: 0; width: 95%; text-align: center;">
+                <div class="content">Build: 1.2_190819_2151 (19.08.19)</div>
+            </ons-card>
+
+        </ons-page>
+    </template>
+
+
+    <!-- Über Seite -->
+    <template id="about.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Über
+                </div>
+            </ons-toolbar>
+
+            <ons-card>
+                <div class="title">
+                    Entwickler
+                </div>
+                <div class="content">
+                    <ons-list>
+                        <ons-list-item>Maurice Mansfeld</ons-list-item>
+                        <ons-list-item>Jannis Maruschke</ons-list-item>
+                        <ons-list-item>Niklas Sandhu</ons-list-item>
+                    </ons-list>
+                </div>
+            </ons-card>
+
+            <ons-card>
+                <div class="title">
+                    Sponsoren
+                </div>
+                <img src="lib/pic/expert.png" alt="Frapp" style="width: 100%">
+                <img src="lib/pic/nkls-dev.png" alt="Frapp" style="width: 100%">
+            </ons-card>
+
+            <ons-card style="position: fixed; left: 0; bottom: 0; width: 95%; text-align: center;">
+                <div class="content">Build: 1.2_190819_2151 (19.08.19)</div>
+            </ons-card>
+
+        </ons-page>
+    </template>
+
+    <!-- -------Umfrage 1------- -->
+
+    <template id="s1_p1.html">
+        <ons-page id="s1_p1">
+            <ons-toolbar>
+                <div class="center">Umfrage zur Landtagswahl</div>
+                <div class="left" onclick="fn.load('survey.html')">
+                    <ons-back-button>Back</ons-back-button>
+                </div>
+            </ons-toolbar>
+
+            <ons-list-header>Sind sie wahlberechtigt?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.1" input-id="q1.1" value="Ja"></ons-radio>
+                    </label>
+                    <label for="q1.1" class="center">
+                        Ja
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.1" input-id="q1.2" value="Nein"></ons-radio>
+                    </label>
+                    <label for="q1.2" class="center">
+                        Nein
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Welchem Geschlecht sind sie angehörig?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.2" input-id="q2.1" value="Männlich"></ons-radio>
+                    </label>
+                    <label for="q2.1" class="center">
+                        Männlich
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.2" input-id="q2.2" value="Weiblich"></ons-radio>
+                    </label>
+                    <label for="q2.2" class="center">
+                        Weiblich
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.2" input-id="q2.3" value="Divers"></ons-radio>
+                    </label>
+                    <label for="q2.3" class="center">
+                        Divers
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Welche Tätigkeit führen sie aus?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.1" value="Schüler"></ons-radio>
+                    </label>
+                    <label for="q3.1" class="center">
+                        Schüler
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.2" value="Student"></ons-radio>
+                    </label>
+                    <label for="q3.2" class="center">
+                        Student
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.3" value="Berufstätig"></ons-radio>
+                    </label>
+                    <label for="q3.3" class="center">
+                        Berufstätig
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.4" value="Rentner"></ons-radio>
+                    </label>
+                    <label for="q3.4" class="center">
+                        Rentner
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.3" input-id="q3.5" values="Anderes"></ons-radio>
+                    </label>
+                    <label for="q3.5" class="center">
+                        Anderes
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Haben sie sich mit den Wahlprogrammen der Parteien auseinandergesetzt?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.4" input-id="q4.1" value="Ja"></ons-radio>
+                    </label>
+                    <label for="q4.1" class="center">
+                        Ja
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p1.4" input-id="q4.2" value="Nein"></ons-radio>
+                    </label>
+                    <label for="q4.2" class="center">
+                        Nein
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Wie waren sie mit der bisherigen Landesregierung zufrieden?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.5" input-id="q5.1" value="sehr"></ons-radio>
+                    </label>
+                    <label for="q5.1" class="center">
+                        sehr
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.5" input-id="q5.2" value="eher mehr"></ons-radio>
+                    </label>
+                    <label for="q5.2" class="center">
+                        eher mehr
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.5" input-id="q5.3" value="eher weniger"></ons-radio>
+                    </label>
+                    <label for="q5.3" class="center">
+                        eher weniger
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.5" input-id="q5.4" value="weniger"></ons-radio>
+                    </label>
+                    <label for="q5.4" class="center">
+                        weniger
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>An welchen politischen Themen sind sie besonders Interessiert?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.6" input-id="q6.1" value="Migration"></ons-radio>
+                    </label>
+                    <label for="q6.1" class="center">
+                        Migration
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.6" input-id="q6.2" value="Klima-Natur-Landwirtschaft"></ons-radio>
+                    </label>
+                    <label for="q6.2" class="center">
+                        Klima-Natur-Landwirtschaft
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.6" input-id="q6.3" value="Wirtschaft"></ons-radio>
+                    </label>
+                    <label for="q6.3" class="center">
+                        Wirtschaft
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.6" input-id="q6.4" value="Anderes"></ons-radio>
+                    </label>
+                    <label for="q6.4" class="center">
+                        anderes
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Fühlen sie sich an politischen Entscheidungen unserer Demokratie beteiligt?
+            </ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.7" input-id="q7.1" value="Ja"></ons-radio>
+                    </label>
+                    <label for="q7.1" class="center">
+                        Ja
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.7" input-id="q7.2" value="Nein"></ons-radio>
+                    </label>
+                    <label for="q7.2" class="center">
+                        Nein
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.7" input-id="q7.3" value="zum Teil"></ons-radio>
+                    </label>
+
+                    <label for="q7.3" class="center">
+                        zum Teil
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Welche Art von Medien nutzen Sie, um sich politisch zu informieren?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.8" input-id="q8.1" value="Internet"></ons-radio>
+                    </label>
+                    <label for="q8.1" class="center">
+                        Internet
+                    </label>
+                </ons-list-item>
+            </ons-list>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.8" input-id="q8.2" value="Zeitung"></ons-radio>
+                    </label>
+                    <label for="q8.2" class="center">
+                        Zeitung
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.8" input-id="q8.3" value="Öffentliche Veranstaltungen der Parteien">
+                        </ons-radio>
+                    </label>
+                    <label for="q8.3" class="center">
+                        Öffentliche Veranstaltungen der Parteien
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.8" input-id="q8.4" value="Radio"></ons-radio>
+                    </label>
+                    <label for="q8.4" class="center">
+                        Radio
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p2.8" input-id="q8.5" value="anderes"></ons-radio>
+                    </label>
+                    <label for="q8.5" class="center">
+                        anderes
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Wissen Sie, welche Parteien zur Wahl stehen?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.9" input-id="q9.1" value="Ja"></ons-radio>
+                    </label>
+                    <label for="q9.1" class="center">
+                        Ja
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.9" input-id="q9.2" value="Nein"></ons-radio>
+                    </label>
+                    <label for="q9.2" class="center">
+                        Nein
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.9" input-id="q9.3" value="Zum Teil"></ons-radio>
+                    </label>
+                    <label for="q9.3" class="center">
+                        Zum Teil
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Würden Sie sich als politisch engagiert bezeichnen?</ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.10" input-id="q10.1" value="Ja"></ons-radio>
+                    </label>
+                    <label for="q10.1" class="center">
+                        Ja
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.10" input-id="q10.2" value="Nein"></ons-radio>
+                    </label>
+                    <label for="q10.2" class="center">
+                        Nein
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.10" input-id="q10.3" value="Bei bestimmten Themen"></ons-radio>
+                    </label>
+                    <label for="q10.3" class="center">
+                        Bei bestimmten Themen
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Was denken Sie,wie hoch die prozentuale Wahlbeteiligung bei der letzten Landtagswahl
+                war?
+            </ons-list-header>
+            <ons-list>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.1" value="0-20%"></ons-radio>
+                    </label>
+                    <label for="q11.1" class="center">
+                        0-20%
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.2" value="20-40%"></ons-radio>
+                    </label>
+                    <label for="q11.2" class="center">
+                        20-40%
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.3" value="40-60%"></ons-radio>
+                    </label>
+                    <label for="q11.3" class="center">
+                        40-60%
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.4" value="60-80%"></ons-radio>
+                    </label>
+                    <label for="q11.4" class="center">
+                        60-80%
+                    </label>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <label class="left">
+                        <ons-radio name="s1p3.11" input-id="q11.5" value="80-100%"></ons-radio>
+                    </label>
+                    <label for="q11.5" class="center">
+                        80-100%
+                    </label>
+                </ons-list-item>
+            </ons-list>
+
+            <hr />
+
+            <ons-list-header>Was denken Sie, wie könnte man mehr Leute zum Wählen überzeugen?</ons-list-header>
+            <div style="text-align: center; margin-top: 30px;">
+                <p>
+                    <ons-input id="q12.1" modifier="underbar" placeholder="Antwort eingeben..." text></ons-input>
+                </p>
+            </div>
+
+
+            <section style="padding: 8px">
+                <ons-button modifier="large" onclick="createAlertDialog()">Speichern</ons-button>
+            </section>
+        </ons-page>
+    </template>
+
+    <!-- Speichern Dialog -->
+
+    <template id="alert-dialog.html">
+        <ons-alert-dialog id="alert-dialog" modifier="rowfooter">
+            <div class="alert-dialog-title">Speichern...</div>
+            <div class="alert-dialog-content">
+                Deine Antworten werden nun verarbeitet und gespeichert
+            </div>
+            <p id="test1"></p>
+            <div class="alert-dialog-footer">
+                <ons-progress-bar indeterminate></ons-progress-bar>
+            </div>
+        </ons-alert-dialog>
+    </template>
+
+    <!-- Ergebnisse-->
+
+    <template id="answers.html">
+        <ons-page id="answers">
+            <ons-toolbar>
+                <div class="left">
+                    <ons-toolbar-button onclick="fn.open()">
+                        <ons-icon icon="md-menu"></ons-icon>
+                    </ons-toolbar-button>
+                </div>
+                <div class="center">
+                    Ergebnisse Wahl-Umfrage
+                </div>
+            </ons-toolbar>
+
+            <section style="padding: 8px">
+                <ons-button modifier="large" onclick="getData()">Ergebnisse laden</ons-button>
+            </section>
+
+            <ons-list id="solution">
+            </ons-list>
+
+            <br />
+            <br />
+            <br />
+
+            <ons-card style="position: fixed; left: 0; bottom: 0; width: 95%; text-align: center;">
+                <div class="content">Build: 1.2_190819_2151 (19.08.19)</div>
+            </ons-card>
+        </ons-page>
+    </template>
+
 </body>
+<script src="appscript.js"></script>
+
 </html>
-  <!-- <ons-button modifier= "large" id="button"> Get started</ons-button>      -->
